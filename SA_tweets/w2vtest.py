@@ -1,0 +1,25 @@
+# coding=UTF-8
+import gensim
+
+def classifica(str):
+	print "===================="
+	print str
+	print "===================="
+	print "PROBABILIDADE SER NEGATIVO"
+	print model1.score([str.split()])
+	print "PROBABILIDADE SER POSITIVO"
+	print model2.score([str.split()])
+ 
+# TREINA E CRIA MODELO NEGATIVO
+sentences = gensim.models.word2vec.LineSentence("./data/EPTC_POA1nov_23jan_0.txt")
+model1 = gensim.models.Word2Vec(sentences, min_count=1, hs=1)
+
+# TREINA E CRIA MODELO POSITIVO
+sentences = gensim.models.word2vec.LineSentence("./data/EPTC_POA1nov_23jan_1.txt")
+model2 = gensim.models.Word2Vec(sentences, min_count=1, hs=1)
+
+classifica("No acesso a Capital pela rodoviária, fluxo é tranquilo.")
+classifica("Congestionamento na Av. Assis Brasil x Emilio Lucio Esteves por conta de pontos de alagamento.")
+classifica("acidente tem feridos na via")
+classifica("fluxo é tranquilo")
+classifica("No acesso a Capital pela rodoviária, fluxo é tranquilo")
