@@ -20,21 +20,21 @@ from nltk.metrics import scores
 
 posdata = []
 #with open('./data/positive-data.csv', 'rb') as myfile:    
-with open('./data/gold/train_EPTC_POA_v3nbal_1.data', 'rb') as myfile:    
+with open('./data/train_EPTC_POA_v3nbal_1.data', 'rb') as myfile:    
     reader = csv.reader(myfile, delimiter=',')
     for val in reader:
         posdata.append(val[0])        
  
 negdata = []
 #with open('./data/negative-data.csv', 'rb') as myfile:    
-with open('./data/gold/train_EPTC_POA_v3nbal_0.data', 'rb') as myfile:    
+with open('./data/train_EPTC_POA_v3nbal_0.data', 'rb') as myfile:    
     reader = csv.reader(myfile, delimiter=',')
     for val in reader:
         negdata.append(val[0])            
 
 neudata = []
 #with open('./data/negative-data.csv', 'rb') as myfile:    
-with open('./data/gold/train_EPTC_POA_v3nbal_2.data', 'rb') as myfile:    
+with open('./data/train_EPTC_POA_v3nbal_2.data', 'rb') as myfile:    
     reader = csv.reader(myfile, delimiter=',')
     for val in reader:
         neudata.append(val[0])
