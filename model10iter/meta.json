@@ -1,0 +1,19 @@
+{
+  "lang":"pt",
+  "pipeline":[
+    "ner"
+  ],
+  "name":"model",
+  "license":"",
+  "author":"",
+  "url":"",
+  "vectors":{
+    "keys":0,
+    "width":0,
+    "vectors":0
+  },
+  "version":"0.0.0",
+  "spacy_version":">=2.0.9",
+  "email":"",
+  "description":""
+}
